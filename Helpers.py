@@ -7,7 +7,8 @@ import zfit
 def plot_fit(dat: np.ndarray, basis: np.ndarray, model: np.ndarray, 
              obs: zfit.Space, nbins : int=50, smodel: np.ndarray=None,
              drawstyle: str='default', weight: np.ndarray=None,
-             xlabel: str='Observable', zmodel: zfit.pdf.BasePDF=None):
+             xlabel: str='Observable', zmodel: zfit.pdf.BasePDF=None,
+             ax=None):
     """
     quick plotting function to visualise data and model. 
     Takes:
@@ -21,6 +22,7 @@ def plot_fit(dat: np.ndarray, basis: np.ndarray, model: np.ndarray,
      - weight: (array) optional weight array for the data
      - xlabel: (str) label for the x axis
      - zmodel: (zfit PDF) model for drawing submodels
+     - ax: (matplotlib axis) optional axis to plot on
     Returns:
      - None
     """
@@ -33,7 +35,10 @@ def plot_fit(dat: np.ndarray, basis: np.ndarray, model: np.ndarray,
     hist.fill(dat, weight=weight)
 
     # the figure with an errorbar for the data and a line for the model
-    fig, ax = plt.subplots()
+    if ax is None:
+        fig, ax = plt.subplots()
+    else:
+        fig = ax.get_figure()
     yerr = np.ones_like(hist.values())
     yerr[hist.values()>=0] = np.sqrt(hist.values()[hist.values()>=0])
     art_data = ax.errorbar(hist.axes.centers[0], hist.values(), 
@@ -71,5 +76,8 @@ def plot_fit(dat: np.ndarray, basis: np.ndarray, model: np.ndarray,
     # legend and axis labels
     ax.legend(artists, labels, loc='best', 
               title='LHCb Starterkit', title_fontsize=12)
-    ax.set_xlabel(xlabel)
-    ax.set_ylabel('Counts [a.u.]');
+    if not xlabel == None:
+        ax.set_xlabel(xlabel)
+    ax.set_ylabel('Counts [a.u.]')
+    
+    return hist  # return histogram for pulls calculation if needed

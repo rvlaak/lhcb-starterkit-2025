@@ -10,61 +10,73 @@ axes.linewidth: 1
 figure.figsize: 5, 4
 figure.dpi:     100
 
-font.family: serif
-font.serif:  Times New Roman
-font.size:   7
-font.weight: 400
+# Color cycle (matplotlib default-like but fixed for reproducibility)
+# axes.prop_cycle: cycler('color', ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b'])
 
-text.usetex: True
-text.latex.preamble: \usepackage{amsmath}
-mathtext.fontset: cm
-mathtext.rm:      Times New Roman
-mathtext.it:      Times New Roman:italic
-mathtext.bf:      Times New Roman:bold
-mathtext.cal:     Times New Roman:caligraphic
+# Use tight layout by default so figures match the notebook behaviour
+figure.autolayout: True
+
+# Grid styling to match plot_hist defaults
+axes.grid: True
+grid.alpha: 0.3
+grid.linestyle: -
+grid.linewidth: 0.6
+
+# font.family: serif
+# font.serif:  Times New Roman
+# font.size:   7
+# font.weight: 400
+
+# text.usetex: True
+# text.latex.preamble: \usepackage{amsmath}
 # mathtext.fontset: cm
-# mathtext.rm:      DejaVu Serif:style=Book
-# mathtext.it:      DejaVu Serif:style=Italic
-# mathtext.bf:      DejaVu Serif:style=Bold
-# mathtext.cal:     DejaVu Serif Condensed:style=Condensed,Book
+# mathtext.rm:      Times New Roman
+# mathtext.it:      Times New Roman:italic
+# mathtext.bf:      Times New Roman:bold
+# # mathtext.cal:     Times New Roman:calligraphic
+# # mathtext.fontset: cm
+# # mathtext.rm:      DejaVu Serif:style=Book
+# # mathtext.it:      DejaVu Serif:style=Italic
+# # mathtext.bf:      DejaVu Serif:style=Bold
+# # mathtext.cal:     DejaVu Serif Condensed:style=Condensed,Book
 
-legend.frameon:        false
-legend.handletextpad:  0.3
-legend.numpoints:      1
-legend.labelspacing:   0.2
-legend.fontsize:       12
-legend.title_fontsize: 12
+# legend.frameon:        false
+# legend.handletextpad:  0.3
+# legend.numpoints:      1
+# legend.labelspacing:   0.2
+# legend.fontsize:       12
+# legend.title_fontsize: 12
 
-lines.linewidth:       1
-lines.markeredgewidth: 0
-lines.markersize:      7
+# lines.linewidth:       1
+# lines.markeredgewidth: 0
+# lines.markersize:      7
 
-savefig.bbox:       tight
-savefig.pad_inches: 0.1
+# savefig.bbox:       tight
+# savefig.pad_inches: 0.1
 
-xaxis.labellocation: right
-yaxis.labellocation: top
+# xaxis.labellocation: right
+# yaxis.labellocation: top
 
-xtick.major.size:    8
-xtick.minor.size:    4
-xtick.major.width:   1.
-xtick.minor.width:   1.
-xtick.major.pad:     10
-xtick.minor.pad:     10
-xtick.labelsize:     13
-xtick.top:           True
-xtick.minor.visible: True
-xtick.direction:     in
+# xtick.major.size:    8
+# xtick.minor.size:    4
+# xtick.major.width:   1.
+# xtick.minor.width:   1.
+# xtick.major.pad:     10
+# xtick.minor.pad:     10
+# xtick.labelsize:     13
+# xtick.top:           True
+# xtick.minor.visible: True
+# xtick.direction:     in
 
-ytick.major.size:    8
-ytick.minor.size:    4
-ytick.major.width:   1.
-ytick.minor.width:   1.
-ytick.major.pad:     10
-ytick.minor.pad:     10
-ytick.labelsize:     13
-ytick.right:         True
-ytick.minor.visible: True
-ytick.direction:     in
+# ytick.major.size:    8
+# ytick.minor.size:    4
+# ytick.major.width:   1.
+# ytick.minor.width:   1.
+# ytick.major.pad:     10
+# ytick.minor.pad:     10
+# ytick.labelsize:     13
+# ytick.right:         True
+# ytick.minor.visible: True
+# ytick.direction:     in
 
-errorbar.capsize: 2
+# errorbar.capsize: 2
