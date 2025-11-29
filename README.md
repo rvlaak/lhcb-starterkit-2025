@@ -15,19 +15,19 @@ The full requirements can be found in [requirements.txt](https://github.com/rvla
 An installation guide can be found on [the zfit webpage](https://zfit.readthedocs.io/en/latest/getting_started/installation.html).
 
 The way I recommend to set up zfit is through a virtual environment for python with [miniconda](https://docs.conda.io/en/latest/miniconda.html).
-Because of certain dependencies on other packages, certain versions of zfit might cause instabilities with other packages.
-At the time of writing, I use the following commands to install a version of zfit and dependencies needed for these tutorials that is compatible with all dependencies:
+I use the following commands to install a version of zfit and dependencies needed for these tutorials:
 ```
 conda create -n zfit_env python=3.10 -y
 conda activate zfit_env
-conda install -c conda-forge zfit
+conda install -c conda-forge zfit -y
 conda install -c conda-forge numpy scipy matplotlib pandas ipywidgets hepstats -y
 ```
-Note that the latest version of tensorflow, which is automatically installed by zfit, might be unstable when paired with zfit at some points in this tutorial.
-In case of a kernel crash, try downgrading to specific stable versions:
+Note that at the time of writing, the version of tensorflow that is automatically installed by zfit, might be unstable when paired with zfit's sampler used at some points in this tutorial.
+In case of a kernel crash, a quick fix is to downgrade to specific stable versions:
 ```
-pip install tensorflow==2.16.2 tensorflow-probability==0.24.0 zfit==0.28.0
+pip install tensorflow==2.16.2 tensorflow-probability==0.24.0
 ```
+
 
 ## Acknowledgements
 
