@@ -1,4 +1,4 @@
-# lhcb-starterkit-2022
+# lhcb-starterkit-2025
 
 This repository contains a tutorial for the [`zfit`](https://github.com/zfit/zfit) and [`Minuit`](https://iminuit.readthedocs.io/en/stable/) libraries for parameter estimation in python that was created for the LHCb starterkit 2022.
 
