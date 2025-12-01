@@ -44,14 +44,14 @@ def plot_fit(dat: np.ndarray, basis: np.ndarray, model: np.ndarray,
     art_data = ax.errorbar(hist.axes.centers[0], hist.values(), 
                            xerr=hist.axes.widths[0]/2, yerr=yerr, fmt='.', 
                            label='Data', color='black', zorder=10)
-    art_model = ax.plot(basis, model * area/nbins, color='darkturquoise', 
+    art_model = ax.plot(basis, model * area/nbins, #color='C0', 
                         label='Model', zorder=8, drawstyle=drawstyle)[0]
     
     # if we have the uncertainty on the model we draw it as contour
     # and update the artist for the legend to reflect on the new model
     if smodel is not None:
         _art = ax.fill_between(basis, (model+smodel)*area/nbins, 
-                               (model-smodel)*area/nbins, color='darkturquoise', 
+                               (model-smodel)*area/nbins, color='C0', 
                                alpha=0.5, zorder=-2)
         art_model = (art_model, _art)
 
@@ -70,7 +70,7 @@ def plot_fit(dat: np.ndarray, basis: np.ndarray, model: np.ndarray,
         names = [m.name.replace('_extended','') for m in zmodel.get_models()]
         labels.extend(names)
         for mdex, pdf in enumerate(pdfs):
-            artists.append(ax.plot(basis, pdf, color=cmap(norm(mdex)), 
+            artists.append(ax.plot(basis, pdf, #color=cmap(norm(mdex)), 
                                    linestyle='--')[0])
         
     # legend and axis labels

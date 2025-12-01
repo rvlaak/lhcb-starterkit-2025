@@ -37,4 +37,4 @@ I extend my gratitude to Jonas Eschle and Iason Krommydas for useful discussion 
 
 I also want to express gratitude to those mentioned by Sebastian to have helped in the improvement of the presentation of [the original content](https://github.com/schmitse/lhcb-starterkit-2022/tree/main); Lorenzo Paolucci, Gediminas Sarpis, and Dan Thompson. 
 
-Parts of [the original tutorial](https://github.com/schmitse/lhcb-starterkit-2022/tree/main) are inspired by [Hans Dembinskis pyHEP](https://nbviewer.org/github/HDembinski/PyHEP-2022-iminuit/blob/main/iminuit.ipynb) tutorial for `Minuit` and [Statistical Data Analysis](https://books.google.de/books/about/Statistical_Data_Analysis.html?hl=de&id=ff8ZyW0nlJAC&redir_esc=y) by Glen Cowan.
+Parts of [the original tutorial](https://github.com/schmitse/lhcb-starterkit-2022/tree/main) are inspired by [Hans Dembinskis pyHEP](https://nbviewer.org/github/HDembinski/PyHEP-2022-iminuit/blob/main/iminuit.ipynb) tutorial for [`Minuit`](https://iminuit.readthedocs.io/en/stable/) and [Statistical Data Analysis](https://books.google.de/books/about/Statistical_Data_Analysis.html?hl=de&id=ff8ZyW0nlJAC&redir_esc=y) by Glen Cowan.
