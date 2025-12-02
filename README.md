@@ -31,7 +31,7 @@ pip install tensorflow==2.16.2 tensorflow-probability==0.24.0
 
 ## Acknowledgements
 
-This repository is largely taken from [the 2022 LHCb Starterkit](https://github.com/schmitse/lhcb-starterkit-2022/tree/main) by Sebastian Schmitt. Many thanks to Sebastian for giving me permission to use his repository for the 2025 Starterkit!
+This repository is largely taken from [the 2022 LHCb Starterkit](https://github.com/schmitse/lhcb-starterkit-2022/tree/main) by Sebastian Schmitt. Many thanks to Sebastian for giving me permission to use his repository for the 2025 Starterkit and for helping me improve on some of the additions I made to it!
 
 I extend my gratitude to Jonas Eschle and Iason Krommydas for useful discussion in the preparation of this tutorial and their development of [`zfit`](https://github.com/zfit/zfit).
 
